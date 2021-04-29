@@ -1,0 +1,1303 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/15/2020 7:29:20 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-KG3679B5"
+  DTS:CreatorName="LAPTOP-KG3679B5\sonia"
+  DTS:DTSID="{AC814D82-5BDB-4015-AB23-848CA4DFFA36}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{D8D9EDE4-1A08-4F06-AE57-2DDBA5FB2431}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ConnectionManager4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{31C0F851-0C05-4159-A8D2-FE4F7B6F2908}"
+      DTS:ObjectName="ConnectionManager4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\sonia\Desktop\StockDatabase\stocks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{749780BD-44C6-44F8-873F-4FAB42B52C13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="High"
+              DTS:DTSID="{7082EB4B-D232-4130-8C0D-2388A8C3A73D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Low"
+              DTS:DTSID="{E3CA4423-835B-47E8-9490-FBDEEE6E0C16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Open"
+              DTS:DTSID="{3DCA1529-D995-44B0-A2E0-EDAC84EBCB3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Close"
+              DTS:DTSID="{7E23A53C-AC44-43E3-933A-9EABF9CA8EB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Volume"
+              DTS:DTSID="{BBD09F8E-87A3-4D4F-937F-9E9B65122847}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Adj Close"
+              DTS:DTSID="{6F75A029-05D4-40E6-8658-7CC01D7CD222}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{D2369D14-BBD1-4E7C-9C82-4266CACA5577}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockSymbol"
+              DTS:DTSID="{5DE704C1-7C2C-4392-AEA9-7649E3B5FF80}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ConnectionManager7]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CB8B00EC-82CC-447F-9270-0321D79542EE}"
+      DTS:ObjectName="ConnectionManager7">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\sonia\Desktop\StockDatabase\stocks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{0E9D92AC-9E50-46AA-A85D-7C32A61573BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="High"
+              DTS:DTSID="{C6DBA2A5-409D-4B95-BCBD-700AFA88E8F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Low"
+              DTS:DTSID="{CC7A1EB6-111F-4FE3-8764-2D5CF9E859C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Open"
+              DTS:DTSID="{2937FC00-B828-48A6-AD21-E511AD75D11B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Close"
+              DTS:DTSID="{868A1C58-ADBB-42F1-8E9B-78F0C198C4EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Volume"
+              DTS:DTSID="{730774B8-1C7C-4497-9EFA-E4FE2C508526}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Adj Close"
+              DTS:DTSID="{F6C0C6E7-CCB3-4D84-94FA-49F9A91FC535}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{7FBF43B2-1FEC-42CD-A9D3-C11444C81E11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockSymbol"
+              DTS:DTSID="{AD512C05-A7D6-4F8A-9F57-DAA7615A7006}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSVConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DDD68137-EEF4-49B6-9B6F-96166BE57F2C}"
+      DTS:ObjectName="CSVConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\sonia\Desktop\StockDatabase\stocks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{E2451797-478B-4AB7-BDC1-5E55040330A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="High"
+              DTS:DTSID="{175B3E36-E387-4EB7-A45B-2252A313FD63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Low"
+              DTS:DTSID="{3ED5673C-CE4F-42D6-A63E-D4AD711ED1A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Open"
+              DTS:DTSID="{ABCE295E-4C29-496E-8F87-FCC05ADEF515}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Close"
+              DTS:DTSID="{AAB5FA5F-8CA9-4E31-9E9A-F5DF4DE64511}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Volume"
+              DTS:DTSID="{1EEF5E51-AFA7-4517-96B5-41D6CA6901E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Adj Close"
+              DTS:DTSID="{8C20BE03-9689-4B4C-8C71-67E20A06958A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{848640A0-3744-41C2-A371-AD88B5901CFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockSymbol"
+              DTS:DTSID="{1368DE3F-7A4A-4B6B-A84B-8000ADE96529}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BD89A84D-75F6-4FA8-84E0-01A031B8E4F2}"
+      DTS:ObjectName="LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-KG3679B5\SQLEXPRESS;Initial Catalog=STG_PROJECT;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2326A455-5E73-48B8-A822-9D6B4B20B756}"
+      DTS:ObjectName="LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-KG3679B5\SQLEXPRESS;Initial Catalog=STG_PROJECT;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{693E16E6-58F9-4B18-BFFC-86D7976A2F78}"
+      DTS:ObjectName="LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-KG3679B5\SQLEXPRESS;Initial Catalog=STG_PROJECT;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-KG3679B5\SQLEXPRESS.StockDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{600175B6-A769-49E6-A905-308C5D391763}"
+      DTS:ObjectName="LAPTOP-KG3679B5\SQLEXPRESS.StockDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-KG3679B5\SQLEXPRESS;Initial Catalog=StockDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Creating the Dimension Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B9158E4A-9D56-463B-9545-E012E071CDD4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creating the Dimension Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{600175B6-A769-49E6-A905-308C5D391763}"
+          SQLTask:SqlStatementSource="CREATE TABLE DW_Stock&#xA;(&#xA;Stock_key INT IDENTITY(1,1),&#xA;Stg_stock_id INT NOT NULL,&#xA;StockSymbol VARCHAR(10) NULL,&#xA;Description  VARCHAR(50) NULL,&#xA;&#xA;CONSTRAINT PK_DW_Stock PRIMARY KEY (Stock_key)&#xA;)&#xA;&#xA;INSERT INTO [StockDB].[dbo].[DW_Stock]&#xA;(&#xA;[Stg_stock_id ],[StockSymbol],[Description])&#xA;SELECT [Staging_id ], [StockSymbol] ,[Description]&#xA; FROM STG_PROJECT.dbo.StagingArea&#xA;&#xA;CREATE TABLE dbo.DW_Transaction&#xA;(&#xA;Transaction_key INT IDENTITY(1,1),&#xA;Stg_stock_id INT NOT NULL,&#xA;S_Open FLOAT  ,&#xA;S_High FLOAT ,&#xA;S_Low FLOAT,&#xA;S_Close FLOAT,&#xA;S_Adj_Close FLOAT,&#xA;CONSTRAINT PK_DW_Trans PRIMARY KEY (Transaction_key)&#xA;)&#xA;&#xA;INSERT INTO [StockDB].[dbo].[DW_Transaction]&#xA; ([Stg_stock_id]  ,[S_Open]   ,[S_High]   ,[S_Low]  ,[S_Close]&#xA;  ,[S_Adj_Close])&#xA;SELECT  [Staging_id ]&#xA;  ,[Open] ,[High]  ,[Low]  ,[Close]  ,[Adj Close]&#xA;  FROM STG_PROJECT.dbo.StagingArea&#xA;&#xA;&#xA;CREATE TABLE dbo.DW_Time&#xA;(&#xA;Time_Key INT IDENTITY(1,1),&#xA;Stg_stock_id INT NOT NULL,&#xA;FullDate DATE ,&#xA;MonthNumberName NVARCHAR(15) NULL,&#xA;CalendarQuarter TINYINT NULL,&#xA;CalendarYear SMALLINT NULL,&#xA;CONSTRAINT PK_Time_Dim PRIMARY KEY (Time_Key)&#xA;)&#xA;&#xA;INSERT INTO [StockDB].[dbo].[DW_Time]      &#xA;(Stg_stock_id,  FullDate,MonthNumberName, CalendarQuarter, CalendarYear)&#xA;SELECT   [Staging_id ],&#xA;         CAST([Date] As date), DATEPART(month, [Date]) , DATEPART(quarter, [Date]) , &#xA;         DATEPART(year, [Date])  &#xA;  FROM STG_PROJECT.dbo.StagingArea" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Creating the Fact Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{194EB646-8BF0-468A-9E73-1F2684E59A14}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creating the Fact Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{600175B6-A769-49E6-A905-308C5D391763}"
+          SQLTask:SqlStatementSource="CREATE TABLE dbo.DW_StockFact&#xA;(&#xA;StockFact_id INT NOT NULL IDENTITY(1,1),&#xA;Stock_key  INT NOT NULL,&#xA;Transaction_key INT NOT NULL,&#xA;Time_Key INT NOT NULL,&#xA;S_Volume FLOAT,&#xA;S_Returns FLOAT,&#xA;CONSTRAINT PK_DW_StockFact PRIMARY KEY (StockFact_id)&#xA;)&#xA;&#xA;&#xA;ALTER TABLE dbo.DW_StockFact ADD CONSTRAINT&#xA;FK_DW_Stock FOREIGN KEY(Stock_key)&#xA;REFERENCES dbo.DW_Stock (Stock_key);&#xA;&#xA;ALTER TABLE dbo.DW_StockFact ADD CONSTRAINT&#xA;FK_DW_Transac FOREIGN KEY(Transaction_key)&#xA;REFERENCES dbo.DW_Transaction (Transaction_key);&#xA;&#xA;ALTER TABLE dbo.DW_StockFact ADD CONSTRAINT&#xA;FK_Timekey FOREIGN KEY(Time_Key)&#xA;REFERENCES dbo.DW_Time(Time_Key);&#xA;&#xA;insert into  [StockDB].[dbo].[DW_StockFact]&#xA;       ([Stock_key]&#xA;      ,[Transaction_key]&#xA;      ,[Time_Key]&#xA;      ,[S_Volume]&#xA;      ,[S_Returns])&#xA;&#xA;select  SD.Stock_key, DT.Transaction_key, DD.Time_Key,SP.Volume,&#xA;(SP.[Close] - SP.[Open] /(SP.[Open]*100) )&#xA;&#xA;FROM [StockDB].[dbo].[DW_Stock] SD&#xA;LEFT JOIN [STG_PROJECT].[dbo].[StagingArea] SP&#xA;ON SD.Stg_stock_id=SP.[Staging_id ]&#xA;       &#xA;LEFT JOIN [StockDB].[dbo].[DW_Transaction] DT&#xA;ON DT.Stg_stock_id=SP.[Staging_id ]&#xA;&#xA;LEFT JOIN [StockDB].[dbo].[DW_Time] DD&#xA;ON  DD.Stg_stock_id=SP.[Staging_id ]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Creating View MeanOfYear"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2E9D5B72-6AE2-4C9C-9DAB-83BACA055B19}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creating View MeanOfYear"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{600175B6-A769-49E6-A905-308C5D391763}"
+          SQLTask:SqlStatementSource="CREATE VIEW dbo.MeanOfYear&#xA; AS&#xA;SELECT tm.CalendarYear  ,sd.StockSymbol, sd.Description,  AVG(s.S_Returns) as &quot;Mean Of Returns&quot;,&#xA;COUNT_BIG(*) AS NumberOfRows&#xA;FROM [dbo].[DW_StockFact] s inner join&#xA;[dbo].[DW_Transaction] t on t.Transaction_key=s.Transaction_key&#xA;inner join [dbo].[DW_Stock] sd on sd.Stg_stock_id=s.Stock_key&#xA;inner join [dbo].[DW_Time] tm on tm.Time_Key=s.Time_Key&#xA;Group by tm.CalendarYear  ,sd.StockSymbol,sd.Description ;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Creating View ReturnsByDay"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4E4293B7-D988-4298-8FA1-C26CFCCD3A8F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creating View ReturnsByDay"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{600175B6-A769-49E6-A905-308C5D391763}"
+          SQLTask:SqlStatementSource="CREATE VIEW dbo.ReturnsByDay&#xA;WITH SCHEMABINDING AS&#xA;select sf.StockFact_id as 'Stock_id', td.FullDate as 'Day',&#xA;sd.StockSymbol as 'Ticker', sd.Description as 'Description', sum(sf.S_Returns ) as 'Returns',&#xA;COUNT_BIG(*) AS NumberOfRows&#xA;from dbo.DW_StockFact sf  join dbo.DW_Time td on&#xA;sf.Time_Key =td.Time_Key &#xA;&#xA;join dbo.DW_Stock sd on sf.Stock_key=sd.Stock_key&#xA;&#xA;group by FullDate,StockFact_id,StockSymbol,Description  ;&#xA;&#xA;&#xA;GO&#xA;CREATE UNIQUE CLUSTERED INDEX CLU_ReturnsByDay&#xA;ON dbo.ReturnsByDay (Stock_id);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Creating View ReturnsByYear"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{574DE05A-4C87-400B-9082-BDD548C9B831}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creating View ReturnsByYear"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{600175B6-A769-49E6-A905-308C5D391763}"
+          SQLTask:SqlStatementSource="&#xA;CREATE VIEW dbo.ReturnsByYear&#xA;WITH SCHEMABINDING AS&#xA;select  td.CalendarYear as 'CalendarYear',&#xA;sd.StockSymbol as 'Ticker',sd.Description as 'Description',&#xA;sum(sf.S_Returns ) as 'Returns',&#xA;COUNT_BIG(*) AS NumberOfRows&#xA;from dbo.DW_StockFact sf  join dbo.DW_Time td on&#xA;sf.Time_Key =td.Time_Key &#xA;&#xA;join dbo.DW_Stock sd on sf.Stock_key=sd.Stock_key&#xA;&#xA;group by td.CalendarYear,sd.StockSymbol,sd.Description;&#xA;&#xA;GO&#xA;CREATE UNIQUE CLUSTERED INDEX CLU_ReturnsByYear&#xA;ON dbo.ReturnsByYear (CalendarYear);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Creating View Stock_Details"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{81C4AC88-EE2F-4DBF-A198-3D96F49859C0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creating View Stock_Details"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{600175B6-A769-49E6-A905-308C5D391763}"
+          SQLTask:SqlStatementSource="CREATE VIEW  dbo.Stock_Details  AS&#xA;SELECT  FullDate,&#xA;      MonthNumberName,&#xA;      CalendarQuarter,&#xA;      CalendarYear&#xA;       ,StockSymbol &#xA;      , Description&#xA;      ,S_Open&#xA;      ,S_High&#xA;      ,S_Low&#xA;      ,S_Close&#xA;      ,S_Adj_Close,&#xA;       S_Volume,&#xA;       S_Returns   &#xA;FROM [StockDB].[dbo].[DW_StockFact] DW &#xA;INNER JOIN [StockDB].[dbo].[DW_Stock ]DS ON DS.Stock_key=DW.Stock_key&#xA;INNER JOIN [StockDB].[dbo].[DW_Time]  DD ON DD.Time_Key=DW.Time_Key&#xA;INNER JOIN [StockDB].[dbo].[DW_Transaction] T ON T.Transaction_key=DW.Transaction_key;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ETL process"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1A7FBC05-F2FD-492F-9408-4A84D41C9D5B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL process"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL process\CSV Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="CSV Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL process\CSV Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ConnectionManager7]"
+                  connectionManagerRefId="Package.ConnectionManagers[ConnectionManager7]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[High]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[High]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[High]"
+                      name="High"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Low]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Low]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Low]"
+                      name="Low"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Open]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Open]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Open]"
+                      name="Open"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Close]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Close]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Close]"
+                      name="Close"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Volume]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Volume]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Volume]"
+                      name="Volume"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Adj Close]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Adj Close]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Adj Close]"
+                      name="Adj Close"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      length="50"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[StockSymbol]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[StockSymbol]"
+                      length="10"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[StockSymbol]"
+                      name="StockSymbol"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[High]"
+                      dataType="r4"
+                      name="High" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Low]"
+                      dataType="r4"
+                      name="Low" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Open]"
+                      dataType="r4"
+                      name="Open" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Close]"
+                      dataType="r4"
+                      name="Close" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Volume]"
+                      dataType="r4"
+                      name="Volume" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Adj Close]"
+                      dataType="r4"
+                      name="Adj Close" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].ExternalColumns[StockSymbol]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="StockSymbol" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL process\SQL Server"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="SQL Server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[StagingArea]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL process\SQL Server.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-KG3679B5\SQLEXPRESS.STG_PROJECT 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[High]"
+                      cachedDataType="r4"
+                      cachedName="High"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[High]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[High]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Low]"
+                      cachedDataType="r4"
+                      cachedName="Low"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Low]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Low]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Open]"
+                      cachedDataType="r4"
+                      cachedName="Open"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Open]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Open]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Close]"
+                      cachedDataType="r4"
+                      cachedName="Close"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Close]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Close]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Volume]"
+                      cachedDataType="r4"
+                      cachedName="Volume"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Volume]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Volume]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Adj Close]"
+                      cachedDataType="r4"
+                      cachedName="Adj Close"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Adj Close]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Adj Close]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].Columns[StockSymbol]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="StockSymbol"
+                      externalMetadataColumnId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[StockSymbol]"
+                      lineageId="Package\ETL process\CSV Source.Outputs[Flat File Source Output].Columns[StockSymbol]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Staging_id]"
+                      dataType="i4"
+                      name="Staging_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[High]"
+                      dataType="r4"
+                      name="High" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Low]"
+                      dataType="r4"
+                      name="Low" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Open]"
+                      dataType="r4"
+                      name="Open" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Close]"
+                      dataType="r4"
+                      name="Close" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Volume]"
+                      dataType="r4"
+                      name="Volume" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Adj Close]"
+                      dataType="r4"
+                      name="Adj Close" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input].ExternalColumns[StockSymbol]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="StockSymbol" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL process\SQL Server.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL process\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL process\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL process\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL process\SQL Server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL process.Paths[Flat File Source Output]"
+              endId="Package\ETL process\SQL Server.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\ETL process\CSV Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{606C5900-0C5B-46CB-B9E8-50D62786A577}"
+      DTS:From="Package\Creating the Dimension Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Creating the Fact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{96563947-3B79-42A9-BA80-6DA47D05317E}"
+      DTS:From="Package\ETL process"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Creating the Dimension Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{87466CD6-8A15-40E6-9E21-76155A75BA57}"
+      DTS:From="Package\Creating the Fact Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Creating View Stock_Details" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{F9CE62F4-F6E7-4562-A020-89F1FB5CF581}"
+      DTS:From="Package\Creating View ReturnsByDay"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Creating the Fact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{3955932D-1ED4-40EE-8539-A7D9408DF3D0}"
+      DTS:From="Package\Creating View ReturnsByYear"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Creating the Fact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{ECF95AB8-FD0B-4638-AEA3-3AD0CC375D76}"
+      DTS:From="Package\Creating View MeanOfYear"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Creating the Fact Table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\Creating the Dimension Table"
+          TopLeft="30.8571433826369,143.764707898599" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Creating the Fact Table"
+          TopLeft="263.428575914732,66.6823538763713" />
+        <NodeLayout
+          Size="204,41.6"
+          Id="Package\Creating View MeanOfYear"
+          TopLeft="386.85714944528,196.988238056803" />
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Creating View ReturnsByDay"
+          TopLeft="369.142863429321,2.44705885784848" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\Creating View ReturnsByYear"
+          TopLeft="512.685722907708,74.0235304499168" />
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\Creating View Stock_Details"
+          TopLeft="173.714288672623,244.094121070386" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\ETL process"
+          TopLeft="71.4285726449928,33.6470592954167" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="171.923810049304,143.764707898599">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.504765865428,-35.4823540222275"
+              Start="0,0"
+              End="140.504765865428,-27.9823540222275">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-16.0744111885891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-16.0744111885891"
+                    Point2="0,-20.0744111885891"
+                    Point3="4,-20.0744111885891" />
+                  <mssgle:LineSegment
+                    End="136.504765865428,-20.0744111885891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="136.504765865428,-20.0744111885891"
+                    Point2="140.504765865428,-20.0744111885891"
+                    Point3="140.504765865428,-24.0744111885891" />
+                  <mssgle:LineSegment
+                    End="140.504765865428,-27.9823540222275" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="357.428575914732,108.282353876371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78.9142872421092,135.811767194015"
+              Start="0,0"
+              End="-78.9142872421092,128.311767194015">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.9058835970075" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,63.9058835970075"
+                    Point2="0,67.9058835970075"
+                    Point3="-4,67.9058835970075" />
+                  <mssgle:LineSegment
+                    End="-74.9142872421092,67.9058835970075" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.9142872421092,67.9058835970075"
+                    Point2="-78.9142872421092,67.9058835970075"
+                    Point3="-78.9142872421092,71.9058835970075" />
+                  <mssgle:LineSegment
+                    End="-78.9142872421092,128.311767194015" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="475.542863429321,44.0470588578485">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-118.114287514589,22.6352950185228"
+              Start="0,0"
+              End="-118.114287514589,15.1352950185228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.3176475092614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.3176475092614"
+                    Point2="0,11.3176475092614"
+                    Point3="-4,11.3176475092614" />
+                  <mssgle:LineSegment
+                    End="-114.114287514589,11.3176475092614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-114.114287514589,11.3176475092614"
+                    Point2="-118.114287514589,11.3176475092614"
+                    Point3="-118.114287514589,15.3176475092614" />
+                  <mssgle:LineSegment
+                    End="-118.114287514589,15.1352950185228" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="512.685722907708,91.152942163144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-61.2571469929759,0"
+              Start="0,0"
+              End="-53.7571469929759,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-53.7571469929759,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="488.85714944528,196.988238056803">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-86.428573530548,-88.705884180432"
+              Start="0,0"
+              End="-86.428573530548,-81.205884180432">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-54.3101616290952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-54.3101616290952"
+                    Point2="0,-58.3101616290952"
+                    Point3="-4,-58.3101616290952" />
+                  <mssgle:LineSegment
+                    End="-82.428573530548,-58.3101616290952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82.428573530548,-58.3101616290952"
+                    Point2="-86.428573530548,-58.3101616290952"
+                    Point3="-86.428573530548,-62.3101616290952" />
+                  <mssgle:LineSegment
+                    End="-86.428573530548,-81.205884180432" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="139.028572644993,75.2470592954167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35.6380959290226,68.5176486031823"
+              Start="0,0"
+              End="-35.6380959290226,61.0176486031823">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.8049342239026" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.8049342239026"
+                    Point2="0,40.8049342239026"
+                    Point3="-4,40.8049342239026" />
+                  <mssgle:LineSegment
+                    End="-31.6380959290226,40.8049342239026" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.6380959290226,40.8049342239026"
+                    Point2="-35.6380959290226,40.8049342239026"
+                    Point3="-35.6380959290226,44.8049342239026" />
+                  <mssgle:LineSegment
+                    End="-35.6380959290226,61.0176486031823" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL process">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130.4,41.6"
+          Id="Package\ETL process\SQL Server"
+          TopLeft="153.714288332024,158.44706104569" />
+        <NodeLayout
+          Size="132.8,41.6"
+          Id="Package\ETL process\CSV Source"
+          TopLeft="146.857145358105,78.9176481656137" />
+        <EdgeLayout
+          Id="Package\ETL process.Paths[Flat File Source Output]"
+          TopLeft="216.085716845065,120.517648165614">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.9294128800759"
+              Start="0,0"
+              End="0,30.4294128800759">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4294128800759" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL process\SQL Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
